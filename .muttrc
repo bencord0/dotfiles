@@ -1,0 +1,7 @@
+mailboxes imaps://bencord0@citadel.condi.me/INBOX
+set folder="imaps://bencord0@citadel.condi.me/INBOX"
+set spoolfile="imaps://bencord0@citadel.condi.me/INBOX"
+set smtp_url="smtps://bencord0@citadel.condi.me"
+
+set header_cache="~/.hcache"
+set message_cachedir="~/.mcache"

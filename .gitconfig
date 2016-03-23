@@ -1,0 +1,7 @@
+[credential]
+	helper = store
+[user]
+	name = Ben Cordero
+	email = bencord0@condi.me
+[push]
+	default = simple
