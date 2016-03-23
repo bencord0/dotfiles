@@ -1,0 +1,6 @@
+dotfiles
+--------
+
+  $ gpg --import < my_gpg_key
+  $ eval $(gpg-agent --daemon)
+  $ make HOST=...
