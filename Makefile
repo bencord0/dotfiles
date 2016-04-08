@@ -23,6 +23,15 @@ _link:
 	sh -c 'gpg -d < ".ssh/$(HOST)-id_ed25519" > .ssh/id_ed25519'
 	sh -c 'gpg -d < ".ssh/$(HOST)-id_rsa" > .ssh/id_rsa'
 
+_mbp:
+	@echo "Installing dotfiles for [mbp]"
+	ln -svf "$(PWD)/.bashrc" $(HOME)/.bashrc
+	ln -svf "$(PWD)/.gitconfig" $(HOME)/.gitconfig
+	ln -svf "$(PWD)/.tmux.conf" $(HOME)/.tmux.conf
+	ln -svf "$(PWD)/.vimrc" $(HOME)/.vimrc
+
+
+
 
 .PHONY: all _ _link
 

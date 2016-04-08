@@ -16,10 +16,22 @@ fi
 
 
 # Put your fun stuff here.
-[ -r /usr/share/z/z.sh ] && source /usr/share/z/z.sh
+[ -r /usr/local/etc/profile.d/z.sh ] && source /usr/local/etc/profile.d/z.sh
 [ -r /usr/share/bash-completion/completions/pass ] && \
   source /usr/share/bash-completion/completions/pass
+
+for thing in \
+            cargo \
+            docker \
+            password-store \
+            tmux; do
+  [ -r /usr/local/etc/bash_completion.d/$thing ] && \
+  source /usr/local/etc/bash_completion.d/$thing
+done
+
 
 # limit virtual memory to 1g
 #ulimit -v 1000000
 alias tmuxa='tmux a || tmux'
+
+eval $(docker-machine env default)
