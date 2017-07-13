@@ -9,3 +9,10 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[alias]
+  f = fetch --all
+  l = log --show-signature --patch --stat
+  m = merge --verify-signatures
+  sign = commit --amend -S
+[rerere]
+	enabled = true

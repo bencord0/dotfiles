@@ -14,6 +14,8 @@ if [[ $- != *i* ]] ; then
 	return
 fi
 
+export GPG_TTY=$(tty)
+export PATH="$PATH:$HOME/bin"
 
 # Put your fun stuff here.
 [ -r /usr/local/etc/profile.d/z.sh ] && source /usr/local/etc/profile.d/z.sh
@@ -23,6 +25,7 @@ fi
 for thing in \
             cargo \
             docker \
+            git-completion.bash \
             password-store \
             tmux; do
   [ -r /usr/local/etc/bash_completion.d/$thing ] && \
@@ -33,5 +36,9 @@ done
 # limit virtual memory to 1g
 #ulimit -v 1000000
 alias tmuxa='tmux a || tmux'
+alias r='less -r'
+alias open='xdg-open'
+alias rpatch='patch -p1 -R'
+alias abspath='readlink -f'
 
 eval $(docker-machine env default)

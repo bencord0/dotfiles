@@ -45,8 +45,8 @@ set noswapfile
 " Indentation
 set expandtab
 "set smarttab
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 
 "set ai "Auto indent
 "set si "Smart indent
@@ -64,3 +64,13 @@ endfunction
 
 " Mouse?
 set mouse=a
+
+" System clipboard
+set clipboard=unnamed
+
+autocmd BufWritePre * %s/\s\+$//e
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+" Red line on the side
+set colorcolumn=100
