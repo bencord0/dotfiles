@@ -10,9 +10,13 @@
 	smudge = git-lfs smudge %f
 	required = true
 [alias]
+  d = branch -d
   f = fetch --all
-  l = log --show-signature --patch --stat
   m = merge --verify-signatures
+  l = log --show-signature --patch --stat
+  lr = log --show-signature --patch --stat --reverse
+  po = push origin upstream/master:master
+  r = rebase upstream/master
   sign = commit --amend -S
 [rerere]
 	enabled = true

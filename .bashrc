@@ -22,6 +22,9 @@ export PATH="$PATH:$HOME/bin"
 [ -r /usr/share/bash-completion/completions/pass ] && \
   source /usr/share/bash-completion/completions/pass
 
+[ -r ~/src/arcanist/resources/shell/bash-completion ] && \
+  source ~/src/arcanist/resources/shell/bash-completion
+
 for thing in \
             cargo \
             docker \
@@ -32,6 +35,9 @@ for thing in \
   source /usr/local/etc/bash_completion.d/$thing
 done
 
+if hash kubectl 2>/dev/null; then
+    source <(kubectl completion bash)
+fi
 
 # limit virtual memory to 1g
 #ulimit -v 1000000
@@ -39,6 +45,17 @@ alias tmuxa='tmux a || tmux'
 alias r='less -r'
 alias open='xdg-open'
 alias rpatch='patch -p1 -R'
+
+# Go
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
+
+# node
+export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+# eix
+export UPGRADE_TO_HIGHEST_SLOT=false
+
 alias abspath='readlink -f'
 
-eval $(docker-machine env default)
