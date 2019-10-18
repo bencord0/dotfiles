@@ -74,3 +74,19 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " Red line on the side
 set colorcolumn=100
+
+" git clone https://github.com/autozimu/LanguageClient-neovim ~/.vim/LanguageClient-neovim
+set runtimepath+=~/.vim/LanguageClient-neovim
+
+" Language Servers
+" python -> pipsi install 'python-language-server[all]'
+" rust   -> rustup component add rls
+let g:LanguageClient_serverCommands = {
+    \ 'python': [expand('~/.local/bin/pyls')],
+    \ 'rust': [expand('~/.cargo/bin/rustup'), 'run', 'stable', 'rls'],
+    \}
+
+let g:LanguageClient_loggingLevel = 'INFO'
+let g:LanguageClient_virtualTextPrefix = ''
+let g:LanguageClient_loggingFile = expand('~/.vim/LanguageClient.log')
+let g:LanguageClient_serverStderr = expand('~/.vim/LanguageServer.log')
