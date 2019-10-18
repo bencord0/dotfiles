@@ -19,6 +19,8 @@ if [[ -n "${GPG_TTY}" ]]; then
     export GPG_TTY
 fi
 
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+
 # Put your fun stuff here.
 [ -r /usr/local/etc/profile.d/z.sh ] && source /usr/local/etc/profile.d/z.sh
 [ -r /usr/share/bash-completion/completions/pass ] && \
