@@ -14,7 +14,10 @@ if [[ $- != *i* ]] ; then
 	return
 fi
 
-export GPG_TTY=$(tty)
+GPG_TTY="$(tty)"
+if [[ -n "${GPG_TTY}" ]]; then
+    export GPG_TTY
+fi
 
 # Put your fun stuff here.
 [ -r /usr/local/etc/profile.d/z.sh ] && source /usr/local/etc/profile.d/z.sh
