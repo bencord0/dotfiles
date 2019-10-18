@@ -1,14 +1,14 @@
 [credential]
-	helper = store
+ helper = store
 [user]
-	name = Ben Cordero
-	email = ben.cordero@ly.st
+  name = Ben Cordero
+  email = bencord0@condi.me
 [push]
-	default = simple
+  default = simple
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
 [alias]
   d = branch -d
   f = fetch --all
@@ -19,4 +19,4 @@
   r = rebase upstream/master
   sign = commit --amend -S
 [rerere]
-	enabled = true
+  enabled = true
