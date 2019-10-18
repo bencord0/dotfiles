@@ -60,14 +60,48 @@ export PATH="${HOME}/bin:${PATH}"
 export PATH="${HOME}/.local/bin:${PATH}"
 
 # Go
-export GOPATH="$HOME/go"
-export PATH="$PATH:$GOPATH/bin"
+export GOPATH="${HOME}/go"
+export PATH="${GOPATH}/bin:${PATH}"
 
-# node
-export PATH="$HOME/.yarn/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
+# Gradle
+export GRADLE_HOME="${HOME}/gradle_build"
+export PATH="${GRADLE_HOME}/bin:${PATH}"
 
-# eix
-export UPGRADE_TO_HIGHEST_SLOT=false
+# Guix
+export GUIX_LOCATION="${HOME}/.guix-profile/lib/locale"
+export PATH="${HOME}/.guix-profile/bin:${PATH}"
 
+## dev-java/openjdk-bin:11
+## This is installed by portage, but not visible to eselect.
+export JDK_9="/opt/openjdk-bin-11.0.4_p11"
+
+## dev-java/icedtea-bin:8 (stable)
+## This is the system java-vm set by eselect.
+export JDK_18="/opt/icedtea-bin-3.13.0"
+export JDK_17="/opt/icedtea-bin-3.13.0" # Lies
+export JDK_16="/opt/icedtea-bin-3.13.0" # Lies
+
+# Java/JRE/JDK
+export JAVA_HOME="${JDK_9}"
+export PATH="${JAVA_HOME}/bin:${PATH}"
+
+# Kotlin
+export PATH="${HOME}/kotlin-native/bin:${PATH}"
+export PATH="${HOME}/kotlin/bin:${PATH}"
+
+# NodeJS
+export PATH="${HOME}/.yarn/bin:${PATH}"
+
+# Python
+## python-3.8 is not yet visible to eselect.
+export PATH="${HOME}/py38/bin:${PATH}"
+
+# Ruby
+if [[ -d "${HOME}/.rbenv" ]]; then
+    export PATH="${HOME}/.rbenv/bin:${PATH}"
+    eval "$(rbenv init -)"
+fi
+
+# Rust
+export PATH="${PATH}:${HOME}/.cargo/bin"
 
