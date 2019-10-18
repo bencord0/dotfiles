@@ -52,6 +52,9 @@ alias rpatch='patch -p1 -R'
 alias tmuxa='tmux a || tmux'
 alias xclipp='xclip -selection clipboard'
 
+# eix
+export UPGRADE_TO_HIGHEST_SLOT=false
+
 # Local binaries
 export PATH="${HOME}/bin:${PATH}"
 export PATH="${HOME}/.local/bin:${PATH}"
