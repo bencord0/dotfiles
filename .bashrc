@@ -21,8 +21,8 @@ export GPG_TTY=$(tty)
 [ -r /usr/share/bash-completion/completions/pass ] && \
   source /usr/share/bash-completion/completions/pass
 
-[ -r ~/src/arcanist/resources/shell/bash-completion ] && \
-  source ~/src/arcanist/resources/shell/bash-completion
+[ -r "${HOME}/src/arcanist/resources/shell/bash-completion" ] && \
+  source "${HOME}/src/arcanist/resources/shell/bash-completion"
 
 for thing in \
             cargo \
@@ -30,11 +30,15 @@ for thing in \
             git-completion.bash \
             password-store \
             tmux; do
-  [ -r /usr/local/etc/bash_completion.d/$thing ] && \
-  source /usr/local/etc/bash_completion.d/$thing
+  [ -r "/usr/local/etc/bash_completion.d/${thing}" ] && \
+  source "/usr/local/etc/bash_completion.d/${thing}"
 done
 
-if hash kubectl 2>/dev/null; then
+if command -v aws_completer; then
+    complete -c "$(command -v aws_completer)" aws
+fi
+
+if command -v kubectl; then
     source <(kubectl completion bash)
 fi
 
@@ -63,5 +67,4 @@ export PATH="$HOME/.local/bin:$PATH"
 # eix
 export UPGRADE_TO_HIGHEST_SLOT=false
 
-alias abspath='readlink -f'
 
