@@ -15,7 +15,6 @@ if [[ $- != *i* ]] ; then
 fi
 
 export GPG_TTY=$(tty)
-export PATH="$PATH:$HOME/bin"
 
 # Put your fun stuff here.
 [ -r /usr/local/etc/profile.d/z.sh ] && source /usr/local/etc/profile.d/z.sh
@@ -41,10 +40,17 @@ fi
 
 # limit virtual memory to 1g
 #ulimit -v 1000000
-alias tmuxa='tmux a || tmux'
-alias r='less -r'
+alias abspath='readlink -f'
+alias ci='docker-compose -f docker-compose.ci.yml -p project'
 alias open='xdg-open'
+alias r='less -r'
 alias rpatch='patch -p1 -R'
+alias tmuxa='tmux a || tmux'
+alias xclipp='xclip -selection clipboard'
+
+# Local binaries
+export PATH="${HOME}/bin:${PATH}"
+export PATH="${HOME}/.local/bin:${PATH}"
 
 # Go
 export GOPATH="$HOME/go"
