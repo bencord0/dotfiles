@@ -42,6 +42,11 @@ if command -v kubectl; then
     source <(kubectl completion bash)
 fi
 
+# Pushover client
+if [[ -f "${HOME}/.pushover" ]]; then
+    source "${HOME}/.pushover"
+fi
+
 # limit virtual memory to 1g
 #ulimit -v 1000000
 alias abspath='readlink -f'
