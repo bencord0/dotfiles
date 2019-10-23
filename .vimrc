@@ -90,3 +90,4 @@ let g:LanguageClient_loggingLevel = 'INFO'
 let g:LanguageClient_virtualTextPrefix = ''
 let g:LanguageClient_loggingFile = expand('~/.vim/LanguageClient.log')
 let g:LanguageClient_serverStderr = expand('~/.vim/LanguageServer.log')
+let g:LanguageClient_diagnosticsEnable=0
