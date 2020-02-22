@@ -66,7 +66,7 @@ alias open='xdg-open'
 alias r='less -r'
 alias rpatch='patch -p1 -R'
 alias tmuxa='tmux a || tmux'
-alias xclipp='xclip -selection clipboard'
+alias xclipp='([[ $XDG_SESSION_TYPE = wayland ]] && wl-copy -n || xclip -r -selection clipboard)'
 
 # eix
 export UPGRADE_TO_HIGHEST_SLOT=false
