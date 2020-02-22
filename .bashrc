@@ -23,8 +23,6 @@ export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 
 # Put your fun stuff here.
 [ -r /usr/local/etc/profile.d/z.sh ] && source /usr/local/etc/profile.d/z.sh
-[ -r /usr/share/bash-completion/completions/pass ] && \
-  source /usr/share/bash-completion/completions/pass
 
 [ -r "${HOME}/src/arcanist/resources/shell/bash-completion" ] && \
   source "${HOME}/src/arcanist/resources/shell/bash-completion"
@@ -33,10 +31,18 @@ for thing in \
             cargo \
             docker \
             git-completion.bash \
-            password-store \
+            pass \
+            pass-otp \
             tmux; do
-  [ -r "/usr/local/etc/bash_completion.d/${thing}" ] && \
-  source "/usr/local/etc/bash_completion.d/${thing}"
+  if [[ -r "/usr/local/etc/bash_completion.d/${thing}" ]]; then
+    source "/usr/local/etc/bash_completion.d/${thing}"
+    continue
+  fi
+
+  if [[ -r "/usr/share/bash-completion/completions/${thing}" ]]; then
+    source "/usr/share/bash-completion/completions/${thing}"
+    continue
+  fi
 done
 
 if command -v aws_completer; then
