@@ -120,7 +120,7 @@ if [[ -d "${HOME}/.rbenv" ]]; then
 fi
 
 # Rust
-export PATH="${PATH}:${HOME}/.cargo/bin"
+export PATH="${HOME}/.cargo/bin:${PATH}"
 
 # Scala (sbt)
 export SBT_HOME="${HOME}/Software/sbt-1.3.3"
