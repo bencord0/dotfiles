@@ -28,3 +28,5 @@
   smtpserverport = 587
 [init]
 	defaultBranch = production
+[pull]
+	ff = only
