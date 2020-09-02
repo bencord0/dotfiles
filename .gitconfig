@@ -26,3 +26,5 @@
   smtpuser = bencord0
   smtpencryption = tls
   smtpserverport = 587
+[init]
+	defaultBranch = production
