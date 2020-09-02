@@ -139,3 +139,9 @@ export WASMER_DIR="${HOME}/.wasmer"
 
 # VSCode
 export PATH="${PATH}:${HOME}/Software/VSCode-linux-x64/bin"
+
+# zoxide, comes after rust paths
+# $ cargo install zoxide
+if command -v zoxide &> /dev/null; then
+    eval "$(zoxide init bash)"
+fi
