@@ -79,8 +79,10 @@ export PATH="${HOME}/bin:${PATH}"
 export PATH="${HOME}/.local/bin:${PATH}"
 
 # Go
+#export GOROOT="${HOME}/Software/go-1.14"
+export GOROOT="${HOME}/Software/go-1.15"
 export GOPATH="${HOME}/go"
-export PATH="${GOPATH}/bin:${PATH}"
+export PATH="${GOPATH}/bin:${GOROOT}/bin:${PATH}"
 
 # Gradle
 export GRADLE_HOME="${HOME}/gradle_build"
