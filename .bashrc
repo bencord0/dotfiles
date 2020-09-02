@@ -14,6 +14,9 @@ if [[ $- != *i* ]] ; then
 	return
 fi
 
+# Scroll correctly
+LESS="$LESS --mouse"
+
 GPG_TTY="$(tty)"
 if [[ -n "${GPG_TTY}" ]]; then
     export GPG_TTY
