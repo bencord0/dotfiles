@@ -21,3 +21,8 @@
   sign = commit --amend -S
 [rerere]
   enabled = true
+[sendemail]
+  smtpserver = citadel.condi.me
+  smtpuser = bencord0
+  smtpencryption = tls
+  smtpserverport = 587
