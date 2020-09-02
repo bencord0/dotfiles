@@ -48,11 +48,11 @@ for thing in \
   fi
 done
 
-if command -v aws_completer; then
+if command -v aws_completer &> /dev/null; then
     complete -c "$(command -v aws_completer)" aws
 fi
 
-if command -v kubectl; then
+if command -v kubectl &> /dev/null; then
     source <(kubectl completion bash)
 fi
 
