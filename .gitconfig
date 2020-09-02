@@ -15,6 +15,7 @@
   m = merge --verify-signatures
   l = log --show-signature --patch --stat --left-right
   lr = log --show-signature --patch --stat --left-right --reverse
+  ls = log --stat --reverse
   po = push origin upstream/master:master
   r = rebase upstream/master
   sign = commit --amend -S
