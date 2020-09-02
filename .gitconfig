@@ -13,8 +13,8 @@
   d = branch -d
   f = fetch --all
   m = merge --verify-signatures
-  l = log --show-signature --patch --stat
-  lr = log --show-signature --patch --stat --reverse
+  l = log --show-signature --patch --stat --left-right
+  lr = log --show-signature --patch --stat --left-right --reverse
   po = push origin upstream/master:master
   r = rebase upstream/master
   sign = commit --amend -S
