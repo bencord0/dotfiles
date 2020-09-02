@@ -136,3 +136,6 @@ export PATH="${SBT_HOME}/bin:${PATH}"
 # Wasmer
 export WASMER_DIR="${HOME}/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+# VSCode
+export PATH="${PATH}:${HOME}/Software/VSCode-linux-x64/bin"
