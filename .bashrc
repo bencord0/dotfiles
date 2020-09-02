@@ -129,3 +129,6 @@ export PATH="${HOME}/.cargo/bin:${PATH}"
 # Scala (sbt)
 export SBT_HOME="${HOME}/Software/sbt-1.3.3"
 export PATH="${SBT_HOME}/bin:${PATH}"
+
+# reMarkable SDK
+#source /opt/poky/2.1.3/environment-setup-cortexa9hf-neon-poky-linux-gnueabi
