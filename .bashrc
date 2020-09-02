@@ -106,6 +106,10 @@ export JDK_16="/opt/icedtea-bin-3.13.0" # Lies
 export JAVA_HOME="${JDK_9}"
 export PATH="${JAVA_HOME}/bin:${PATH}"
 
+# Javascript/Node
+NODE_DIR="${HOME}/Software/node-v12.18.3-linux-x64"
+export PATH="${NODE_DIR}/bin:${PATH}"
+
 # Kotlin
 export PATH="${HOME}/Software/kotlin-native/bin:${PATH}"
 export PATH="${HOME}/Software/kotlinc/bin:${PATH}"
