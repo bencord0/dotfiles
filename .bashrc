@@ -113,10 +113,6 @@ export PATH="${HOME}/Software/kotlinc/bin:${PATH}"
 # NodeJS
 export PATH="${HOME}/.yarn/bin:${PATH}"
 
-# Python
-## python-3.8 is not yet visible to eselect.
-export PATH="${HOME}/py38/bin:${PATH}"
-
 # Ruby
 if [[ -d "${HOME}/.rbenv" ]]; then
     export PATH="${HOME}/.rbenv/bin:${PATH}"
