@@ -91,3 +91,13 @@ let g:LanguageClient_virtualTextPrefix = ''
 let g:LanguageClient_loggingFile = expand('~/.vim/LanguageClient.log')
 let g:LanguageClient_serverStderr = expand('~/.vim/LanguageServer.log')
 let g:LanguageClient_diagnosticsEnable=0
+
+function LC_keymappings()
+    if has_key(g:LanguageClient_serverCommands, &filetype)
+        nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+
+        set completefunc=LanguageClient#complete
+    endif
+endfunction
+
+autocmd FileType * call LC_keymappings()
