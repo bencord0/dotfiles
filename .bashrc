@@ -85,7 +85,7 @@ export GOPATH="${HOME}/go"
 export PATH="${GOPATH}/bin:${GOROOT}/bin:${PATH}"
 
 # Gradle
-export GRADLE_HOME="${HOME}/gradle_build"
+export GRADLE_HOME="${HOME}/Software/gradle_build"
 export PATH="${GRADLE_HOME}/bin:${PATH}"
 
 # Guix
@@ -107,8 +107,8 @@ export JAVA_HOME="${JDK_9}"
 export PATH="${JAVA_HOME}/bin:${PATH}"
 
 # Kotlin
-export PATH="${HOME}/kotlin-native/bin:${PATH}"
-export PATH="${HOME}/kotlin/bin:${PATH}"
+export PATH="${HOME}/Software/kotlin-native/bin:${PATH}"
+export PATH="${HOME}/Software/kotlinc/bin:${PATH}"
 
 # NodeJS
 export PATH="${HOME}/.yarn/bin:${PATH}"
@@ -126,3 +126,6 @@ fi
 # Rust
 export PATH="${PATH}:${HOME}/.cargo/bin"
 
+# Scala (sbt)
+export SBT_HOME="${HOME}/Software/sbt-1.3.3"
+export PATH="${SBT_HOME}/bin:${PATH}"
