@@ -145,6 +145,9 @@ export PATH="${SBT_HOME}/bin:${PATH}"
 # reMarkable SDK
 #source /opt/poky/2.1.3/environment-setup-cortexa9hf-neon-poky-linux-gnueabi
 
+# aarch64-none-elf (Bare Metal compiler for ARM64 processors)
+export PATH="${PATH}:/opt/linaro/gcc-arm-9.2-2019.12-x86_64-aarch64-none-elf/bin/"
+
 # Wasmer
 export WASMER_DIR="${HOME}/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
