@@ -109,6 +109,12 @@ export JDK_16="/opt/icedtea-bin-3.16.0" # Lies
 export JAVA_HOME="${JDK_18}"
 export PATH="${JAVA_HOME}/bin:${PATH}"
 
+# Android
+#export ANDROID_SDK_ROOT="${HOME}/Android/Sdk"         # dev-util/android-studio
+#export ANDROID_SDK_ROOT="${HOME}/Software/android-11" # https://dl.google.com/android/repository/platform-30_r01.zip
+export ANDROID_PLATFORM_TOOLS="${HOME}/Android/Sdk/platform-tools"
+export PATH="${PATH}:${ANDROID_PLATFORM_TOOLS}"
+
 # Javascript/Node
 NODE_DIR="${HOME}/Software/node-v12.18.3-linux-x64"
 export PATH="${NODE_DIR}/bin:${PATH}"
