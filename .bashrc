@@ -119,6 +119,9 @@ export PATH="${PATH}:${ANDROID_PLATFORM_TOOLS}"
 NODE_DIR="${HOME}/Software/node-v12.18.3-linux-x64"
 export PATH="${NODE_DIR}/bin:${PATH}"
 
+# k3s
+export PATH="${HOME}/Software/k3s-1.19.2+k3s1/bin:${PATH}"
+
 # Kotlin
 export PATH="${HOME}/Software/kotlin-native/bin:${PATH}"
 export PATH="${HOME}/Software/kotlinc/bin:${PATH}"
