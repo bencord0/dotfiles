@@ -12,7 +12,9 @@
 [alias]
   d = branch -d
   f = fetch --all
+  ff = merge --ff-only
   m = merge --verify-signatures
+  p = push -f
   l = log --show-signature --patch --stat --left-right
   lr = log --show-signature --patch --stat --left-right --reverse
   ls = log --stat --reverse
