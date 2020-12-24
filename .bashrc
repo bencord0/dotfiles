@@ -78,6 +78,9 @@ export UPGRADE_TO_HIGHEST_SLOT=false
 export PATH="${HOME}/bin:${PATH}"
 export PATH="${HOME}/.local/bin:${PATH}"
 
+# Crystal
+export PATH="${HOME}/Software/crystal-0.35.1-1/bin/:${PATH}"
+
 # Go
 #export GOROOT="${HOME}/Software/go-1.14"
 export GOROOT="${HOME}/Software/go-1.15"
