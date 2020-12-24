@@ -82,7 +82,7 @@ set runtimepath+=~/.vim/LanguageClient-neovim
 " python -> pipsi install 'python-language-server[all]'
 " rust   -> https://rust-analyzer.github.io/manual.html#rust-analyzer-language-server-binary
 let g:LanguageClient_serverCommands = {
-    \ 'python': [expand('~/.local/bin/pyls')],
+    \ 'python': ['pyls'],
     \ 'rust': ['rust-analyzer'],
     \}
 
