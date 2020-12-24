@@ -97,16 +97,16 @@ export PATH="${HOME}/.guix-profile/bin:${PATH}"
 
 ## dev-java/openjdk-bin:11
 ## This is installed by portage, but not visible to eselect.
-export JDK_9="/opt/openjdk-bin-11.0.4_p11"
+#export JDK_9="/opt/openjdk-bin-11.0.4_p11"
 
 ## dev-java/icedtea-bin:8 (stable)
 ## This is the system java-vm set by eselect.
-export JDK_18="/opt/icedtea-bin-3.13.0"
-export JDK_17="/opt/icedtea-bin-3.13.0" # Lies
-export JDK_16="/opt/icedtea-bin-3.13.0" # Lies
+export JDK_18="/opt/icedtea-bin-3.16.0"
+export JDK_17="/opt/icedtea-bin-3.16.0" # Lies
+export JDK_16="/opt/icedtea-bin-3.16.0" # Lies
 
 # Java/JRE/JDK
-export JAVA_HOME="${JDK_9}"
+export JAVA_HOME="${JDK_18}"
 export PATH="${JAVA_HOME}/bin:${PATH}"
 
 # Javascript/Node
