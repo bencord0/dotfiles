@@ -75,8 +75,11 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " Red line on the side
 set colorcolumn=100
 
-" git clone https://github.com/autozimu/LanguageClient-neovim ~/.vim/LanguageClient-neovim
+" git clone --depth 1 https://github.com/autozimu/LanguageClient-neovim ~/.vim/LanguageClient-neovim
 set runtimepath+=~/.vim/LanguageClient-neovim
+
+" git clone --depth 1 https://github.com/zxqfl/tabnine-vim ~/.vim/tabnine-vim
+set runtimepath+=~/.vim/tabnine-vim
 
 " Language Servers
 " python -> pipsi install 'python-language-server[all]'
