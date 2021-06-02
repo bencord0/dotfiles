@@ -161,3 +161,7 @@ export PATH="${PATH}:${HOME}/Software/VSCode-linux-x64/bin"
 if command -v zoxide &> /dev/null; then
     eval "$(zoxide init bash)"
 fi
+
+if [[ -e "$HOME/.cargo/env" ]]; then
+    source "$HOME/.cargo/env"
+fi
