@@ -21,6 +21,7 @@
   ls = log --stat --reverse
   po = push origin upstream/master:master
   r = rebase upstream/master
+  detach = switch --detach
   sign = commit --amend -S
 [rerere]
   enabled = true
