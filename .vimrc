@@ -73,7 +73,7 @@ autocmd BufWritePre * %s/\s\+$//e
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " Red line on the side
-set colorcolumn=100
+set colorcolumn=80,100
 
 " git clone --depth 1 https://github.com/autozimu/LanguageClient-neovim ~/.vim/LanguageClient-neovim
 set runtimepath+=~/.vim/LanguageClient-neovim
