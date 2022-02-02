@@ -75,32 +75,6 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " Red line on the side
 set colorcolumn=80,100
 
-" git clone --depth 1 https://github.com/autozimu/LanguageClient-neovim ~/.vim/LanguageClient-neovim
-set runtimepath+=~/.vim/LanguageClient-neovim
-
 " git clone --depth 1 https://github.com/zxqfl/tabnine-vim ~/.vim/tabnine-vim
 set runtimepath+=~/.vim/tabnine-vim
 
-" Language Servers
-" python -> pipsi install 'python-language-server[all]'
-" rust   -> https://rust-analyzer.github.io/manual.html#rust-analyzer-language-server-binary
-let g:LanguageClient_serverCommands = {
-    \ 'python': ['pyls'],
-    \ 'rust': ['rust-analyzer'],
-    \}
-
-let g:LanguageClient_loggingLevel = 'INFO'
-let g:LanguageClient_virtualTextPrefix = ''
-let g:LanguageClient_loggingFile = expand('~/.vim/LanguageClient.log')
-let g:LanguageClient_serverStderr = expand('~/.vim/LanguageServer.log')
-let g:LanguageClient_diagnosticsEnable=0
-
-function LC_keymappings()
-    if has_key(g:LanguageClient_serverCommands, &filetype)
-        nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-
-        set completefunc=LanguageClient#complete
-    endif
-endfunction
-
-autocmd FileType * call LC_keymappings()
