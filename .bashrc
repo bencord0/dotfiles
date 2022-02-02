@@ -121,6 +121,9 @@ export PATH="${PATH}:${ANDROID_PLATFORM_TOOLS}"
 NODE_DIR="${HOME}/Software/node-linux-x64"
 export PATH="${NODE_DIR}/bin:${PATH}"
 
+# Javascript/Deno
+export PATH="${HOME}/Software/deno/bin:${PATH}"
+
 # k3s
 export PATH="${HOME}/Software/k3s-1.19.2+k3s1/bin:${PATH}"
 
