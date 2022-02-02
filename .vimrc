@@ -78,3 +78,5 @@ set colorcolumn=80,100
 " git clone --depth 1 https://github.com/zxqfl/tabnine-vim ~/.vim/tabnine-vim
 set runtimepath+=~/.vim/tabnine-vim
 
+" disable go fmt
+let g:go_fmt_autosave = 0
