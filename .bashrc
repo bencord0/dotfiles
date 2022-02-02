@@ -142,6 +142,9 @@ fi
 
 # Rust
 export PATH="${HOME}/.cargo/bin:${PATH}"
+if [[ -e "$HOME/.cargo/env" ]]; then
+    source "$HOME/.cargo/env"
+fi
 
 # Scala (sbt)
 export SBT_HOME="${HOME}/Software/sbt-1.3.3"
@@ -164,8 +167,4 @@ export PATH="${PATH}:${HOME}/Software/VSCode-linux-x64/bin"
 # $ cargo install zoxide
 if command -v zoxide &> /dev/null; then
     eval "$(zoxide init bash)"
-fi
-
-if [[ -e "$HOME/.cargo/env" ]]; then
-    source "$HOME/.cargo/env"
 fi
