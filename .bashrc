@@ -118,7 +118,7 @@ export ANDROID_PLATFORM_TOOLS="${HOME}/Android/Sdk/platform-tools"
 export PATH="${PATH}:${ANDROID_PLATFORM_TOOLS}"
 
 # Javascript/Node
-NODE_DIR="${HOME}/Software/node-v12.18.3-linux-x64"
+NODE_DIR="${HOME}/Software/node-linux-x64"
 export PATH="${NODE_DIR}/bin:${PATH}"
 
 # k3s
