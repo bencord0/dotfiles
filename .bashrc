@@ -26,6 +26,24 @@ if [[ -n "${XDG_RUNTIME_DIR}" ]]; then
     export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 fi
 
+function ensure_ssh_agent() {
+    ssh-add -l &> /dev/null
+    case $? in
+    0)
+        echo "SSH Identity loaded ✅"
+        ;;
+    1)
+        echo "SSH Agent running without identities"
+        echo "  $ ssh-add; to continue"
+        ;;
+    2)
+        eval `ssh-agent` > /dev/null
+        ;;
+    *)
+        ;;
+    esac
+}
+ensure_ssh_agent
 
 # Put your fun stuff here.
 [ -r /usr/local/etc/profile.d/z.sh ] && source /usr/local/etc/profile.d/z.sh
