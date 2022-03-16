@@ -95,12 +95,10 @@ export PATH="${HOME}/.local/bin:${PATH}"
 export PATH="${HOME}/Software/crystal-0.35.1-1/bin/:${PATH}"
 
 # Go
-#export GOROOT="${HOME}/Software/go-1.14"
-#export GOROOT="${HOME}/Software/go-1.15"
-#export GOROOT="${HOME}/Software/go-1.16"
-export GOROOT="${HOME}/Software/go-1.17"
 export GOPATH="${HOME}/go"
-export PATH="${GOPATH}/bin:${GOROOT}/bin:${PATH}"
+GOROOT="${HOME}/Software/go"
+export PATH="${GOROOT}/bin:${GOPATH}/bin:${PATH}"
+
 
 # Gradle
 export GRADLE_HOME="${HOME}/Software/gradle_build"
