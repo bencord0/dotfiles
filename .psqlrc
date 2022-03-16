@@ -1,1 +1,2 @@
 \set PROMPT1 = '%`date` %n@%m:%/%R%# '
+\set connect_timeout = 1000
