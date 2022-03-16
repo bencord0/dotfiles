@@ -22,7 +22,10 @@ if [[ -n "${GPG_TTY}" ]]; then
     export GPG_TTY
 fi
 
-export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+if [[ -n "${XDG_RUNTIME_DIR}" ]]; then
+    export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+fi
+
 
 # Put your fun stuff here.
 [ -r /usr/local/etc/profile.d/z.sh ] && source /usr/local/etc/profile.d/z.sh
