@@ -69,14 +69,6 @@ for thing in \
   fi
 done
 
-if command -v aws_completer &> /dev/null; then
-    complete -c "$(command -v aws_completer)" aws
-fi
-
-if command -v kubectl &> /dev/null; then
-    source <(kubectl completion bash)
-fi
-
 # Pushover client
 if [[ -f "${HOME}/.pushover" ]]; then
     source "${HOME}/.pushover"
@@ -188,4 +180,12 @@ export PATH="${PATH}:${HOME}/Software/VSCode-linux-x64/bin"
 # $ cargo install zoxide
 if command -v zoxide &> /dev/null; then
     eval "$(zoxide init bash)"
+fi
+
+if command -v aws_completer &> /dev/null; then
+    complete -c "$(command -v aws_completer)" aws
+fi
+
+if command -v kubectl &> /dev/null; then
+    source <(kubectl completion bash)
 fi
