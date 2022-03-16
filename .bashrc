@@ -138,6 +138,9 @@ export PATH="${HOME}/Software/deno/bin:${PATH}"
 # k3s
 export PATH="${HOME}/Software/k3s-1.19.2+k3s1/bin:${PATH}"
 
+# k8s
+export PATH="${HOME}/Software/kubernetes/bin:${PATH}"
+
 # Kotlin
 export PATH="${HOME}/Software/kotlin-native/bin:${PATH}"
 export PATH="${HOME}/Software/kotlinc/bin:${PATH}"
