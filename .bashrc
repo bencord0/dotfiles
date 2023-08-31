@@ -81,6 +81,8 @@ alias ci='docker-compose -f docker-compose.ci.yml -p project'
 alias open='xdg-open'
 alias r='less -r'
 alias rpatch='patch -p1 -R'
+# https://github.com/RoadieHQ/marketing-site/pull/858
+alias techdocs='npx @techdocs/cli@1.2.0'
 alias tmuxa='tmux a || tmux'
 alias xclipp='([[ $XDG_SESSION_TYPE = wayland ]] && wl-copy -n || xclip -r -selection clipboard)'
 
