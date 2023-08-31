@@ -192,3 +192,10 @@ fi
 if command -v kubectl &> /dev/null; then
     source <(kubectl completion bash)
 fi
+# \u: Username
+# \h: Hostname
+# \D: Timestamp Format:
+#   : %F - ISO Date YYYY-MM-DD
+#   : %T - Time     HH:MM:SS
+# \w: Working Dir
+export PS1='[\D{%F %T}] \u@\h:\w\$ '
