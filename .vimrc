@@ -66,7 +66,7 @@ endfunction
 set mouse=a
 
 " System clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 autocmd BufWritePre * %s/\s\+$//e
 
