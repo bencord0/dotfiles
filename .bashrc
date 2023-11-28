@@ -222,4 +222,4 @@ fi
 #   : %F - ISO Date YYYY-MM-DD
 #   : %T - Time     HH:MM:SS
 # \w: Working Dir
-export PS1='[\D{%F %T}] \u@\h:\w\$ '
+export PS1='[\D{%F %T}] \[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
