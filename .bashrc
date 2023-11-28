@@ -197,6 +197,10 @@ if command -v aws_completer &> /dev/null; then
     complete -c "$(command -v aws_completer)" aws
 fi
 
+if command -v keychain &> /dev/null; then
+    eval `keychain --eval id_ed25519`
+fi
+
 if command -v kubectl &> /dev/null; then
     source <(kubectl completion bash)
 fi
