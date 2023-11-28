@@ -5,13 +5,14 @@
   email = bencord0@condi.me
 [push]
   default = simple
+  autoSetupRemote = true
 [filter "lfs"]
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
   required = true
 [alias]
   d = branch -d
-  f = fetch --all
+  f = fetch --all --prune
   ff = merge --ff-only
   fff = pull --ff-only
   m = merge --verify-signatures
@@ -38,3 +39,9 @@
 	fastcopyblame = true
 	fontui = -family \"DejaVu Sans Mono\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 	fontdiff = -family \"Nimbus Mono L\" -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+[commit]
+	gpgsign = true
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+[branch]
+	autoSetupMerge = simple
