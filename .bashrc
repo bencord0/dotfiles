@@ -223,3 +223,5 @@ fi
 #   : %T - Time     HH:MM:SS
 # \w: Working Dir
 export PS1='[\D{%F %T}] \[\033]0;\u@\h:\w\007\]\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
+
+export OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4317
