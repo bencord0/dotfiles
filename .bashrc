@@ -45,9 +45,8 @@ function ensure_ssh_agent() {
 }
 ensure_ssh_agent
 
-# Put your fun stuff here.
-[ -r /usr/local/etc/profile.d/z.sh ] && source /usr/local/etc/profile.d/z.sh
 
+# Put your fun stuff here.
 [ -r "${HOME}/src/arcanist/resources/shell/bash-completion" ] && \
   source "${HOME}/src/arcanist/resources/shell/bash-completion"
 
