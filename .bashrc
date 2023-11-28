@@ -89,9 +89,10 @@ alias xclipp='([[ $XDG_SESSION_TYPE = wayland ]] && wl-copy -n || xclip -r -sele
 # eix
 export UPGRADE_TO_HIGHEST_SLOT=false
 
-# Local binaries
-export PATH="${HOME}/bin:${PATH}"
-export PATH="${HOME}/.local/bin:${PATH}"
+# Local binaries (python/pipsi)
+if [[ -d "${HOME}/.local/bin" ]]; then
+	export PATH="${HOME}/.local/bin:${PATH}"
+fi
 
 # Crystal
 export PATH="${HOME}/Software/crystal-0.35.1-1/bin/:${PATH}"
@@ -100,7 +101,6 @@ export PATH="${HOME}/Software/crystal-0.35.1-1/bin/:${PATH}"
 export GOPATH="${HOME}/go"
 GOROOT="${HOME}/Software/go"
 export PATH="${GOROOT}/bin:${GOPATH}/bin:${PATH}"
-
 
 # Gradle
 export GRADLE_HOME="${HOME}/Software/gradle_build"
@@ -207,6 +207,10 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # git clone https://github.com/pyenv/pyenv.git "${HOME}/.pyenv"
 if [[ -e ~/.pyenv ]]; then
 	export PATH="${HOME}/.pyenv/bin:${HOME}/.pyenv/shims:${PATH}"
+fi
+
+if [[ -e ~/bin ]]; then
+	export PATH="${HOME}/bin:${PATH}"
 fi
 
 # \u: Username
