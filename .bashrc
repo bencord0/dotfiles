@@ -110,6 +110,9 @@ export PATH="${GRADLE_HOME}/bin:${PATH}"
 export GUIX_LOCATION="${HOME}/.guix-profile/lib/locale"
 export PATH="${HOME}/.guix-profile/bin:${PATH}"
 
+# Helm
+export PATH="${HOME}/Software/helm/bin:${PATH}"
+
 ## dev-java/openjdk-bin:11
 ## This is installed by portage, but not visible to eselect.
 #export JDK_9="/opt/openjdk-bin-11.0.4_p11"
@@ -129,6 +132,9 @@ export PATH="${JAVA_HOME}/bin:${PATH}"
 #export ANDROID_SDK_ROOT="${HOME}/Software/android-11" # https://dl.google.com/android/repository/platform-30_r01.zip
 export ANDROID_PLATFORM_TOOLS="${HOME}/Android/Sdk/platform-tools"
 export PATH="${PATH}:${ANDROID_PLATFORM_TOOLS}"
+
+# Google Cloud SDK
+export PATH="${HOME}/Software/google-cloud-sdk/bin:${PATH}"
 
 # Javascript/Node
 NODE_DIR="${HOME}/Software/node-linux-x64"
@@ -157,7 +163,6 @@ if [[ -d "${HOME}/.rbenv" ]]; then
 fi
 
 # Rust
-export PATH="${HOME}/.cargo/bin:${PATH}"
 if [[ -e "$HOME/.cargo/env" ]]; then
     source "$HOME/.cargo/env"
 fi
@@ -179,6 +184,9 @@ export WASMER_DIR="${HOME}/.wasmer"
 # VSCode
 export PATH="${PATH}:${HOME}/Software/VSCode-linux-x64/bin"
 
+# Teleport
+export PATH="${PATH}:${HOME}/Software/teleport"
+
 # zoxide, comes after rust paths
 # $ cargo install zoxide
 if command -v zoxide &> /dev/null; then
@@ -192,6 +200,15 @@ fi
 if command -v kubectl &> /dev/null; then
     source <(kubectl completion bash)
 fi
+
+# https://krew.sigs.k8s.io/docs/user-guide/setup/install/
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# git clone https://github.com/pyenv/pyenv.git "${HOME}/.pyenv"
+if [[ -e ~/.pyenv ]]; then
+	export PATH="${HOME}/.pyenv/bin:${HOME}/.pyenv/shims:${PATH}"
+fi
+
 # \u: Username
 # \h: Hostname
 # \D: Timestamp Format:
